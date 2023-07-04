@@ -1,0 +1,565 @@
+@font-face {
+  font-family: "ITC";
+  src: url("fonts/ITCAvantGardePro-XLt.otf") format("opentype");
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  background-image: url("images/Trees-22.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+#nameinput {
+  display: none;
+  /* display: flex; */
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: ITC;
+  font-size: 60px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 2px 2px 5px black;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+#un-error {
+  font-family: ITC;
+  font-size: 20px;
+  color: #d5d7d8;
+  margin-top: 40px;
+  padding: 0px;
+  text-shadow: 2px 2px 5px black;
+  transition: opacity 0.1s linear;
+  opacity: 0;
+}
+
+#un-form {
+  margin: 0px;
+}
+
+#username {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  font-family: ITC;
+  font-size: 60px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1.5px solid #d5d7d8;
+}
+
+#username:focus {
+  outline: none;
+}
+
+#clockcont {
+  display: flex;
+}
+
+#hour {
+  position: relative;
+  font-family: ITC;
+  font-size: 150px;
+  color: #d5d7d8;
+  text-shadow: 2px 2px 5px black;
+  padding-right: 5px;
+}
+
+#minute {
+  position: relative;
+  font-family: ITC;
+  font-size: 150px;
+  color: #699b73;
+  text-shadow: 1px 1px 5px black;
+  padding-left: 5px;
+}
+
+#wkdate {
+  position: relative;
+  font-family: ITC;
+  font-size: 25px;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+}
+
+#greeting {
+  position: relative;
+  font-family: ITC;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  margin-top: 100px;
+}
+
+#changename {
+  width: 5ch;
+  position: relative;
+  font-family: ITC;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  background-color: transparent;
+  border: 0px;
+  transition: all 0.3s;
+}
+
+#changename:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#changename:focus {
+  cursor: pointer;
+  border-bottom: 1.5px solid #d5d7d8;
+  outline: none;
+}
+
+#focuscont {
+  display: none;
+  height: 200px;
+  opacity: 0;
+  flex-direction: column;
+  justify-items: center;
+  font-family: ITC;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  margin-top: 60px;
+  transition: opacity 0.3s linear;
+}
+
+#focustxtform {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  font-family: ITC;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1.5px solid #d5d7d8;
+}
+
+#focustxtform:focus {
+  outline: none;
+}
+
+#focuslist {
+  display: none;
+  opacity: 0;
+  height: 200px;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  font-family: ITC;
+  font-size: 25px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  margin-top: 60px;
+  transition: opacity 0.3s linear;
+}
+
+#flistcont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: ITC;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+}
+
+#listtxt {
+  padding: 0px 10px;
+}
+
+#focusbox {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+#fmenu {
+  height: 1em;
+  font-size: 10px;
+  font-weight: 100;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+#flistcont:hover #focusbox {
+  opacity: 1;
+}
+
+#flistcont:hover #fmenu {
+  opacity: 1;
+}
+
+#fmenu:hover {
+  color: white;
+}
+
+#quotecont {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.3s linear;
+  opacity: 1;
+}
+
+#quotetxt {
+  display: flex;
+  /* display: none; */
+  flex-direction: row;
+  padding: 15px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+  position: absolute;
+  bottom: 20px;
+}
+
+#qauthor {
+  display: flex;
+  /* display: none; */
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+  position: absolute;
+  bottom: 30px;
+  opacity: 0;
+}
+
+#addquote {
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  cursor: pointer;
+  padding: 0px 10px;
+  padding-top: 4px;
+  font-size: 10px;
+  opacity: 0;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+  position: absolute;
+  bottom: 5px;
+}
+
+#wrapper {
+  z-index: 1;
+  width: 600px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+  border: 1px solid black;
+  bottom: 15px;
+}
+
+#addquote:hover {
+  opacity: 1;
+  color: white;
+}
+
+#wrapper:hover ~ #quotetxt {
+  bottom: 30px;
+}
+
+#wrapper:hover ~ #addquote {
+  opacity: 1;
+}
+
+#wrapper:hover ~ #qauthor {
+  opacity: 1;
+  bottom: 20px;
+}
+
+#aq-form {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#qt-input,
+#qa-input,
+#aq-input {
+  display: none;
+}
+
+#qt-input {
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+  position: absolute;
+  bottom: 45px;
+  width: 400px;
+  text-align: center;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1.5px solid #d5d7d8;
+}
+
+#qt-input:focus,
+#qa-input:focus {
+  outline: none;
+}
+
+#qt-input::placeholder,
+#qa-input::placeholder {
+  font-weight: bold;
+  color: #d5d7d8;
+}
+
+#qa-input {
+  padding: 0px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+  position: absolute;
+  bottom: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1.5px solid #d5d7d8;
+}
+
+#aq-input {
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  cursor: pointer;
+  padding: 0px 10px;
+  padding-top: 4px;
+  font-size: 10px;
+  opacity: 1;
+  position: absolute;
+  bottom: 5px;
+  transition: bottom 0.3s linear, opacity 0.3s linear;
+}
+
+#aq-input:hover {
+  color: white;
+}
+
+#qerror {
+  text-align: center;
+  font-family: ITC;
+  font-size: 15px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 2px 2px 5px black;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+.todocont {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: ITC;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+}
+
+#todotxt {
+  cursor: pointer;
+}
+
+#todotxt:hover {
+  color: white;
+}
+
+#todoinput {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  height: 1em;
+  width: 300px;
+  font-family: ITC;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d5d7d8;
+  text-shadow: 1px 1px 5px black;
+  text-align: left;
+  background-color: transparent;
+  border: 0px;
+}
+
+#todoform {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-family: ITC;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d5d7d8;
+}
+
+#listdivs div {
+  width: 100%;
+  padding: 2px 0px;
+  overflow-wrap: normal;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-family: ITC;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d5d7d8;
+  animation: fadeIn 0.2s, slideUp 0.2s;
+}
+
+#listdivs div label {
+  display: inline;
+  width: 265px;
+}
+
+#listdivs div input {
+  cursor: pointer;
+  margin: 0px 10px;
+  margin-top: 5px;
+  align-self: flex-start;
+}
+
+#todoinput:focus {
+  outline: none;
+}
+
+.todoclear {
+  cursor: pointer;
+  width: 15px !important;
+  padding: 0px 10px !important;
+  align-content: center !important;
+  height: auto !important;
+}
+
+.todoclear:focus {
+  color: white;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+/* The actual popup */
+.todocont .popuptext {
+  height: auto;
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+  bottom: 30px;
+  margin-left: -80px;
+  opacity: 0.8;
+}
+
+/* Popup arrow */
+/* .todocont .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 280px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    opacity: 0.8;
+} */
+
+/* Toggle this class - hide and show the popup */
+.todocont .show {
+  visibility: visible;
+  animation: fadeIn 0.3s;
+}
+
+/* Add animation (fade in the popup) */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes heightSlide {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1080px;
+  }
+}
