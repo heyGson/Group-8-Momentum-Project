@@ -1,5 +1,6 @@
 // FUNCTIONS
 //testing
+//ajhksdgfjkhsadf
 function hour() {
   //Function for displaying hours
   let date = new Date();
