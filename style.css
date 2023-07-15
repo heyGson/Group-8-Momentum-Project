@@ -3,6 +3,15 @@
   src: url("fonts/ITCAvantGardePro-XLt.otf") format("opentype");
 }
 
+/* Added by Gson to reset the paddding and margin of the page to 0. I also use border-box globally so
+that the element no longer increase its width.  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   overflow: hidden;
   width: 100vw;
