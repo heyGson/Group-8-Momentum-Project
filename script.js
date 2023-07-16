@@ -11,7 +11,7 @@ function hour() {
 
   clock = hr;
 
-  document.getElementById("hour").innerText = clock;
+  document.getElementById("hour").innerText = `${clock}:`;
 
   let t = setTimeout(function () {
     hour();
