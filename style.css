@@ -3,6 +3,15 @@
   src: url("fonts/ITCAvantGardePro-XLt.otf") format("opentype");
 }
 
+/* Added by Gson to reset the paddding and margin of the page to 0. I also use border-box globally so
+that the element no longer increase its width.  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   overflow: hidden;
   width: 100vw;
@@ -86,15 +95,18 @@ main {
   color: #d5d7d8;
   text-shadow: 2px 2px 5px black;
   padding-right: 5px;
+  font-weight: bolder;
 }
 
 #minute {
   position: relative;
   font-family: ITC;
   font-size: 150px;
-  color: #699b73;
+  /* color: #699b73; */
+  color: #d5d7d8;
   text-shadow: 1px 1px 5px black;
   padding-left: 5px;
+  font-weight: bolder;
 }
 
 #wkdate {
@@ -103,6 +115,7 @@ main {
   font-size: 25px;
   color: #d5d7d8;
   text-shadow: 1px 1px 5px black;
+  font-weight: bolder;
 }
 
 #greeting {
